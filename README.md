@@ -3,7 +3,7 @@
 编译环境：Python Flask框架 （我们使用的是Pycharm编译器）。
 部署步骤： 
   1.安装python3和任一python编译器
-  2.下载并解压“project.zip”并在编译器中打开
+  2.下载并解压“project”文件夹，并在编译器中打开
   3.利用python中的pip 安装“requirements.txt”中的包。
     cmd命令：D:\大三\软件体系架构\project\venv\Scripts> activate
             (venv)D:\大三\软件体系架构\project\venv\Scripts> pip install -r requirements.txt
