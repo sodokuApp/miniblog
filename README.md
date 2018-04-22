@@ -1,6 +1,6 @@
 # register and log in
-项目简介：用户可以在网页上利用邮箱注册账户，注册成功后可以登录到自己的账户
-编译环境：Python Flask框架 （我们使用的是Pycharm编译器）
+项目简介：用户可以在网页上利用邮箱注册账户，注册成功后可以登录到自己的账户。
+编译环境：Python Flask框架 （我们使用的是Pycharm编译器）。
 部署步骤： 
   1.安装python3和任一python编译器
   2.下载并解压“project.zip”并在编译器中打开
