@@ -2,14 +2,21 @@
 1.	三个微服务：用户可以在网页上利用邮箱注册账户，注册成功后可以登录进自己的账户。登录成功后可以发布微博客。 
 2.	开发环境：Python Flask框架  
 3. 部署步骤： 
+
 a. 安装python3和任一python编译器。（我们使用的是PyCharm编译器）
+
 b. 下载并解压“project”文件夹，并在编译器中打开。 
+
 c. 利用python中的pip 安装“requirements.txt”中的包。 
+
 d. 在本地mysql中创建数据库（数据库名字：project） 
+
 e. 创建项目与数据库的连接及数据库中的表。 
+
 f. 在python编译器中运行project.py文件，在浏览器中输入网址127.0.0.1:5000，点击“register”可以注册账户。注册成功后跳转到登录页面并在数据库中可以看到相应的信息。点击“Question”,用户可以在首页上发布微博客。
 
 二．微服务实现
+
 在实现微服务的时候我们借助了flask的BluePrint. 它可以帮助开发者将不同功能的module分开，从而将一个大的应用分割成各自实现不同功能的module，不同的蓝本需要对应不同的功能模块，并且它们位于不同的Python包中，而蓝图的创建则位于Python包下的init.py文件。不同Python包下的views Python文件对应不同蓝本下的路由，最后再在主程序中通过app.register_blueprint()方法将蓝图注册到URL映射中。在我们的项目中，我们在app文件夹下设置了三个API蓝本，每个蓝本都有各自的init Python 文件 用来创建蓝本并定义该蓝本的总URL，views模块写相关的业务逻辑，在template，static文件夹存储与该业务逻辑相关的界面文件。最后，我们将这三个蓝本注册到了我们的project主程序中。
 
 三．ZooKeeper 部署
