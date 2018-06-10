@@ -16,6 +16,7 @@ f. 在python编译器中运行project.py文件，在浏览器中输入网址127.
 1. 原理
 
 zookeeper提供了节点watch的功能，zookeeper的client（对外提供服务的server）监控zookeeper上的节点（znode），当节点变动的时候，client会收到变动事件和变动后的内容，基于zookeeper的这个特性，我们可以给服务器集群中的所有机器（client）都注册watch事件，监控特定znode，节点中存储部署代码的配置信息，需要更新代码的时候，修改znode中的值，服务器集群中的每一台server都会收到代码更新事件，然后触发调用，更新目标代码。也可以很容易的横向扩展，可以随意的增删机器，机器启动的时候注册监控节点事件即可。我的机器数量有限，在本地模拟zookeeper集群和服务器集群，原理都是一样的，可能具体实施的时候有些小异。在本机通过3个端口模拟zookeeper集群，多个目录模拟服务器集。
+
 2.	Zookeeper配置
 
 在三个zookeeper文件夹的conf文件夹下复制zoo_simple.cfg重命名为zoo.cfg,内容改为以下：
@@ -75,6 +76,7 @@ zookeeper提供了节点watch的功能，zookeeper的client（对外提供服务
 ~cd D：\zookeeper-3.4.10-colony\zookeeper-3\bin
 ~zkServer.cmd
   
-四．Dockers 部署。
+四．Dockers 部署
+
 根据Dockerfile文件，在项目路径下输入命令“docker build -t miniblog .”创建镜像，在docker terminal中输入“docker images”可查看到所有镜像。
 
