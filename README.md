@@ -43,9 +43,17 @@ zookeeper提供了节点watch的功能，zookeeper的client（对外提供服务
 
 在三个zookeeper文件夹的conf文件夹下复制zoo_simple.cfg重命名为zoo.cfg,内容改为以下：
 
-zookeeper1文件下的zoo.cfg: dataDir=D:/zookeeper/zookeeper-3.4.10-colony/zookeeper-1/data dataLogDir=D:/zookeeper/zookeeper-3.4.10-colony/zookeeper-1/logs clientPort=2181 server.1=192.168.1.108:2888:3888 server.2=192.168.1.108:2889:3889 server.3=192.168.1.108:2890:3890
-zookeeper2文件下的zoo.cfg: dataDir=D:/zookeeper/zookeeper-3.4.10-colony/zookeeper-2/data dataLogDir=D:/zookeeper/zookeeper-3.4.10-colony/zookeeper-2/logs clientPort=2182 server.1=192.168.1.108:2888:3888 server.2=192.168.1.108:2889:3889 server.3=192.168.1.108:2890:3890
-zookeeper3文件下的zoo.cfg: dataDir=D:/zookeeper/zookeeper-3.4.10-colony/zookeeper-3/data dataLogDir=D:/zookeeper/zookeeper-3.4.10-colony/zookeeper-3/logs clientPort=2183 server.1=192.168.1.108:2888:3888 server.2=192.168.1.108:2889:3889 server.3=192.168.1.108:2890:3890
+zookeeper1文件下的zoo.cfg: dataDir=D:/zookeeper/zookeeper-3.4.10-colony/zookeeper-1/data dataLogDir=D:/zookeeper/zookeeper-3.4.10-colony
+
+/zookeeper-1/logs clientPort=2181 server.1=192.168.1.108:2888:3888 server.2=192.168.1.108:2889:3889 server.3=192.168.1.108:2890:3890
+
+zookeeper2文件下的zoo.cfg: dataDir=D:/zookeeper/zookeeper-3.4.10-colony/zookeeper-2/data dataLogDir=D:/zookeeper/zookeeper-3.4.10-colony
+
+/zookeeper-2/logs clientPort=2182 server.1=192.168.1.108:2888:3888 server.2=192.168.1.108:2889:3889 server.3=192.168.1.108:2890:3890
+
+zookeeper3文件下的zoo.cfg: dataDir=D:/zookeeper/zookeeper-3.4.10-colony/zookeeper-3/data dataLogDir=D:/zookeeper/zookeeper-3.4.10-colony
+
+/zookeeper-3/logs clientPort=2183 server.1=192.168.1.108:2888:3888 server.2=192.168.1.108:2889:3889 server.3=192.168.1.108:2890:3890
 
 3.	参数说明
 • tickTime：基本事件单元，以毫秒为单位，用来控制心跳和超时，默认情况超时的时间为两倍的tickTime
